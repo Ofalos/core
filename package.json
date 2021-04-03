@@ -1,7 +1,7 @@
 {
-  "name": "core",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ofalos-core",
+  "version": "0.0.1",
+  "description": "A package to build html from JSON",
 
   "main": "dist/core.ssr.js",
   "browser": "dist/core.esm.js",
