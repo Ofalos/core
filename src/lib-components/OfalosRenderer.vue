@@ -18,7 +18,7 @@ export default {
   name: "OfalosRenderer",
   components: { OfalosWrapper },
   props: {
-    content: { type: [Array, Object, String], required: true },
+    content: { type: [Array, Object], required: true },
   }
 }
 </script>
