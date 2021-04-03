@@ -1,19 +1,16 @@
 {
-  "name": "ofalos-core",
+  "name": "@ofalos/core",
   "version": "0.0.1",
   "description": "A package to build html from JSON",
-
   "main": "dist/core.ssr.js",
   "browser": "dist/core.esm.js",
   "module": "dist/core.esm.js",
   "unpkg": "dist/core.min.js",
-
   "files": [
     "dist/*",
     "src/**/*.vue"
   ],
   "sideEffects": false,
-
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
@@ -21,10 +18,7 @@
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-
-  "dependencies": {
-  },
-
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
@@ -48,5 +42,19 @@
   },
   "engines": {
     "node": ">=12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ofalos/core.git"
+  },
+  "keywords": [
+    "ofalos",
+    "ui"
+  ],
+  "author": "Abdulhakeem Mustapha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ofalos/core/issues"
+  },
+  "homepage": "https://github.com/Ofalos/core#readme"
 }
