@@ -1,4 +1,4 @@
-# Ofaloso Core
+# Ofalos Core
 Building UI components can be quite repititive and often require you deploying and redeploying changes which can be quite boring.
 Ofalos core allow you to build your UI components from JSON. This opens doors for you to build UI quicker, and just work on unique business
 logic. It also opens door for hosting your page definition elsewhere and updating the layout of your page, forms by non-technical persons.
