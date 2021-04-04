@@ -10,57 +10,9 @@ export default Vue.extend({
   data() {
     return {
       content: {
-        header: {
-          tag: "h1",
-          content: "This is a h1 tag",
-          style: "background: red; width: 50vw;"
-        },
-        image: {
-          tag: "img",
-          src: "https://ik.imagekit.io/hooli/usaifa/tr:h-168/usaifa_-PMdXMUgW.png"
-        },
-        list: {
-          tag: "ul",
-          style: "padding-left: 40px;",
-          content: [
-            {
-              tag: "li",
-              content: "first",
-              style: "color: blue"
-            },
-            {
-              tag: "li",
-              content: [
-                {
-                  tag: "ul",
-                  content: [
-                    {tag: "li", content: "second sub 1"},
-                    {tag: "li", content: "second sub 2"}
-                  ]
-                }
-              ],
-              style: "color: gold"
-            },
-            {
-              tag: "li",
-              content: "second",
-              style: "color: brown"
-            },
-            {
-              tag: "li",
-              content: "third",
-              style: "color: green"
-            }
-          ]
-        },
-        complex: {
-          tag: "p",
-          content: [
-            {tag: "span", content: "I am", style: "color: yellow"},
-            {tag: "span", content: "going to london"}
-          ]
-        }
-      }
+        name: { tag: "AInput", type: "text", key: "name" }
+      },
+      v: { name: "Abdulhakeem", email: "amustapha@hooli.ng" }
     }
   }
   // components: {
@@ -71,6 +23,7 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <OfalosRenderer :content="content"/>
+    <pre>{{v}}</pre>
+    <OfalosRenderer :content="content" v-model="v"/>
   </div>
 </template>

@@ -2,11 +2,9 @@
   <span>
     <template v-for="(widget, key) in content">
       <OfalosWrapper :widget="widget" :key="key"
-                     @click="(val) => {$emit('click', val)}"
-                     @input="(val) => {$emit('input', val)}"
-                     @blur="(val) => {$emit('blur', val)}"
-                     @focus="(val) => {$emit('focus', val)}"
-                     style="width: 100%"/>
+                     v-model="value[widget.key || key]"
+                     style="width: 100%"
+                     @click="(val) => {$emit('click', val)}"/>
     </template>
   </span>
 </template>
@@ -18,7 +16,17 @@ export default {
   name: "OfalosRenderer",
   components: { OfalosWrapper },
   props: {
+    value: {type: Object, required: false, default: () => {return {}}},
     content: { type: [Array, Object], required: true },
+  },
+  methods: {
+    resolve (index, key) {
+      const value = JSON.parse(JSON.stringify(this.value))
+      if (index) {
+        console.log(index, value,  value[index])
+      }
+
+    }
   }
 }
 </script>
